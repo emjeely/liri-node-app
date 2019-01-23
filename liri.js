@@ -19,14 +19,13 @@ fs.readFile('random.txt', 'utf8', (err, res) => {
       }
       const msg = "\nHUH? \n Here you go: " + data.tracks.items[0].album.name + " by " + data.tracks.items[0].album.artists[0].name + "\nListen here: " + data.tracks.items[0].album.href + "\n-----------------------------\n"
       console.log(msg);
-      fs.appendFile("log.txt", msg, "utf8", (err) => {
-          if (err) {
-              console.log(err);
-          }
+      // fs.appendFile("log.txt", msg, "utf8", (err) => {
+      //     if (err) {
+      //         console.log(err);
+      //     }
       })
   });
-})
-}
+};
 
 function song() {
   const wholeArgv = process.argv;
@@ -40,15 +39,15 @@ function song() {
           return console.log("Error occured: " + err);
         }
 
-        const aob = "No song? ... here you get: " + data.tracks.items[0].album.name + " by " + data.tracks.items[0].album.artists[0].name + "\nGo here to listen: " + data.tracks.items[0].album.href + "\n-------------------------\n"
+        const aob = "No song? ... here LISTEN TO THIS: " + data.tracks.items[0].album.name + " by " + data.tracks.items[0].album.artists[0].name + "\nGo here to listen: " + data.tracks.items[0].album.href + "\n-------------------------\n"
 
         console.log(aob);
 
-        fs.appendFile(aob, "utf8", (err) => {
-          if(err) {
-            console.log(err);
-          }
-        })
+        // fs.appendFile(aob, "utf8", (err) => {
+        //   if(err) {
+        //     console.log(err);
+        //   }
+        // })
       });
 
     } else{
@@ -63,11 +62,11 @@ function song() {
 
         console.log(songM);
 
-        fs.appendFile(songM, "utf8", (err) => {
-          if (err) {
-            console.log(err);
-          }
-        })
+        // fs.appendFile(songM, "utf8", (err) => {
+        //   if (err) {
+        //     console.log(err);
+        //   }
+        // })
       }
             });
     }
