@@ -39,7 +39,7 @@ function song() {
           return console.log("Error occured: " + err);
         }
 
-        const aob = "No song? ... here LISTEN TO THIS: " + data.tracks.items[0].album.name + " by " + data.tracks.items[0].album.artists[0].name + "\nGo here to listen: " + data.tracks.items[0].album.href + "\n-------------------------\n"
+        const aob = "No song? ... here LISTEN TO: " + data.tracks.items[0].album.name + " by " + data.tracks.items[0].album.artists[0].name + "\nGo here to listen: " + data.tracks.items[0].album.href + "\n-------------------------\n"
 
         console.log(aob);
 
@@ -70,7 +70,7 @@ function song() {
       }
             });
     }
-}
+  };
 
 
 function concert() {
